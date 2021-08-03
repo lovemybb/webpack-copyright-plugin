@@ -1,6 +1,6 @@
 {
   "name": "webpack-copyright-plugin",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "webpack copyright plugin",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,6 @@
   },
   "homepage": "https://github.com/lovemybb/webpack-copyright-plugin#readme",
   "directories": {
-    "example": "example",
-    "lib": "lib",
-    "test": "test"
+    "lib": "lib"
   }
 }

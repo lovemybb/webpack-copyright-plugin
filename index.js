@@ -11,11 +11,11 @@ class CopyrightWebpackPlugin{
   /**
    * 
    * @param {
-   *  copyright 版权所属方
-   *  projectName 项目名称
-   *  showBuildTime 是否显示打包时间，默认显示true
-   *  showBuildBranch 是否显示打包分支，默认显示true
-   *  content  附件信息
+   *  copyright:版权所属方,
+   *  projectName:项目名称,
+   *  showBuildTime:是否显示打包时间，默认显示true,
+   *  showBuildBranch:是否显示打包分支，默认显示true,
+   *  content:附件信息,
    * } options 
    */
   constructor(options={}) {
