@@ -6,7 +6,8 @@
  var runGitCommand = require('../lib/helpers/run-git-command')
 
 runGitCommand('../example', 'add ./', function(err){
+  if(err)return console.error(err)
   runGitCommand('../example', 'commit -am "init test plugin"', function(err){
-
+    if(err)return console.error(err)
   })
 })
