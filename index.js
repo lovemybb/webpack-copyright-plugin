@@ -10,13 +10,15 @@ class CopyrightWebpackPlugin{
 
   /**
    * 
-   * @param {
+   * @param options
+   *
+   * {
    *  copyright:版权所属方,
    *  projectName:项目名称,
    *  showBuildTime:是否显示打包时间，默认显示true,
    *  showBuildBranch:是否显示打包分支，默认显示true,
-   *  content:附件信息,
-   * } options 
+   *  content:附件信息
+   * }  
    */
   constructor(options={}) {
     this.options = Object.assign({
@@ -48,7 +50,7 @@ class CopyrightWebpackPlugin{
   apply(compiler) {
     const that = this
     compiler.hooks.emit.tapAsync(
-      'CopyrightWebpackPlugin',
+      'WebpackCopyrightPlugin',
       (compilation, cb) => {
         // 写入文件
         compilation.assets['copyright.txt'] = {

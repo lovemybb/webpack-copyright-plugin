@@ -3,11 +3,10 @@
  * @Author: lovemybb
  * @Date: 2021-08-03
  */
- var runGitCommand = require('../lib/helpers/run-git-command')
-
-runGitCommand('../example', 'add ./', function(err){
-  if(err)return console.error(err)
-  runGitCommand('../example', 'commit -am "init test plugin"', function(err){
-    if(err)return console.error(err)
-  })
-})
+const fs = require('fs')
+if(fs.existsSync('./example/dist/copyright.txt')&&fs.readFileSync('./example/dist/copyright.txt').length !== 0){
+  console.log('successed')
+}else{
+  console.error('copyright.txt not exists')
+  console.error('failed')
+}

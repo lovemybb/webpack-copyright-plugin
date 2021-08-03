@@ -4,7 +4,7 @@
   "description": "webpack copyright plugin",
   "main": "index.js",
   "scripts": {
-    "testvue2": "node test/test-vue2.js;cd example;npm install ;npm run build;"
+    "testvue2": "cd example;npm install ;npm run build;cd ..;node test/test-vue2.js;"
   },
   "repository": {
     "type": "git",
