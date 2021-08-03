@@ -1,6 +1,6 @@
 {
   "name": "webpack-copyright-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "webpack copyright plugin",
   "main": "index.js",
   "scripts": {
