@@ -20,17 +20,20 @@ class CopyrightWebpackPlugin{
    */
   constructor(options={}) {
     this.options = Object.assign({
+      copyright:'',
+      projectName:'',
       showBuildTime:true,
-      showBuildBranch:true
+      showBuildBranch:true,
+      content:''
     },options) ;
+    this.copyrightContent = ''
     // 获取git 信息
     const date = new Date()
     const commitId = getGitInfo.commithash()
     const branch = getGitInfo.branch('name-rev ' + commitId)
     // 生成copyRight 信息
     let contentArr = []
-    contentArr.push(`Copyright @${this.options.copyright}\n`)
-    contentArr.push(`+++ ${this.options.copyright}出品 +++`)
+    contentArr.push(`Copyright @${this.options.copyright}`)
     contentArr.push(`项目名：${this.options.projectName}`)
     if(this.options.showBuildTime)
       contentArr.push(`打包时间：${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
@@ -39,21 +42,21 @@ class CopyrightWebpackPlugin{
       contentArr.push(`commitId:${JSON.stringify(commitId)}`)
     }
     contentArr.push(`${this.options.content}`)
-    this.copyrightContent = contentArr.join('\n')
-
+    this.copyrightContent =String(contentArr.join('\n'))
   }
 
   apply(compiler) {
+    const that = this
     compiler.hooks.emit.tapAsync(
       'CopyrightWebpackPlugin',
       (compilation, cb) => {
         // 写入文件
         compilation.assets['copyright.txt'] = {
           source: function () {
-            return this.copyrightContent;
+            return that.copyrightContent;
           },
           size: function () {
-            return this.copyrightContent.length;
+            return that.copyrightContent.length;
           },
         };
         cb();

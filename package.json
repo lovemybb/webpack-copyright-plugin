@@ -4,7 +4,7 @@
   "description": "webpack copyright plugin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testvue2": "node test/test-vue2.js;cd example;npm run build;"
   },
   "repository": {
     "type": "git",
