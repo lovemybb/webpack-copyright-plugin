@@ -1,0 +1,24 @@
+{
+  "name": "webpack-copyright-plugin",
+  "version": "0.0.1",
+  "description": "webpack copyright plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovemybb/webpack-copyright-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "copyright",
+    "plugin"
+  ],
+  "author": "lovemybb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lovemybb/webpack-copyright-plugin/issues"
+  },
+  "homepage": "https://github.com/lovemybb/webpack-copyright-plugin#readme"
+}
