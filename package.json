@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/lovemybb/webpack-copyright-plugin/issues"
   },
-  "homepage": "https://github.com/lovemybb/webpack-copyright-plugin#readme"
+  "homepage": "https://github.com/lovemybb/webpack-copyright-plugin#readme",
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  }
 }
